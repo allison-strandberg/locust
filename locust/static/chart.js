@@ -97,13 +97,18 @@
                     feature: {
                         saveAsImage: {
                             name: this.title.replace(/\s+/g, '_').toLowerCase() + '_' + Date.parse(new Date()) / 1000,
-                            title: "Download as PNG"
+                            title: "Download as PNG",
+                            emphasis: {
+                                iconStyle: {
+                                    textPosition: "left"
+                                }
+                            }
                         }
                     }
                 }
             })
         }
-        
+
         addValue(values, user_count=0) {
             this.dates.push(new Date().toLocaleTimeString());
             var seriesData = [];
